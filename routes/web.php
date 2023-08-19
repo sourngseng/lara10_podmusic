@@ -24,7 +24,6 @@ Route::get('/',[FrontendController::class,'index'])->name('pagehome');
 
 Route::get('about',[FrontendController::class,'about'])->name('about');
 Route::get('listing-page',[FrontendController::class,'listing_page'])->name('listing-page');
-Route::get('detail-page',[FrontendController::class,'detail_page'])->name('detail-page');
+Route::get('song/{song_id}/show',[FrontendController::class,'detail_page'])->name('song');
 Route::get('contact',[FrontendController::class,'contact'])->name('contact');
-
 

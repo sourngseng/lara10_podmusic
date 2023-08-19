@@ -37,7 +37,7 @@
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item {{ request()->routeIs('listing-page') ? 'active':'' }}" href="{{route('listing-page')}}">Listing Page</a></li>
 
-                        <li><a class="dropdown-item {{ request()->routeIs('detail-page') ? 'active':'' }}" href="{{route('detail-page')}}">Detail Page</a></li>
+                        {{-- <li><a class="dropdown-item {{ request()->routeIs('detail-page') ? 'active':'' }}" href="{{route('detail-page')}}">Detail Page</a></li> --}}
                     </ul>
                 </li>
 

@@ -30,7 +30,7 @@
                     <div class="col-lg-3 col-12">
                         <div class="custom-block-icon-wrap">
                             <div class="custom-block-image-wrap custom-block-image-detail-page">
-                                <img src="{{asset('pod_talk')}}/images/podcast/11683425_4790593.jpg"
+                                <img src="{{asset('pod_talk')}}/{{$song->photo_song}}"
                                     class="custom-block-image img-fluid" alt="">
                             </div>
                         </div>
@@ -57,11 +57,11 @@
                                 <small class="ms-auto">Episode <span class="badge">15</span></small>
                             </div>
 
-                            <h2 class="mb-2">Modern Vintage</h2>
+                            <h2 class="mb-2">{{$song->title}}</h2>
                             <audio controls>
                                 {{-- <source src="horse.ogg" type="audio/ogg"> --}}
-                                <source src="{{asset('pod_talk/songs/Audio.mp3')}}" type="audio/mpeg">
-                              Your browser does not support the audio element.
+                                <source src="{{asset('pod_talk')}}/{{$song->song_parth}}" type="audio/mpeg">
+                              {{$song->description}}
                               </audio>
 
                             <p>What is Content Marketing? If you are wondering what content marketing is all
@@ -73,13 +73,13 @@
                             <p>Pod Talk HTML CSS Template is made by Bootstrap v5.2.2 framework. You are allowed
                                 to modify and use this template for your business websites.</p>
 
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1410562354&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nonstop-link-full-in-cambodia" title="Song Link Cambodia" target="_blank" style="color: #cccccc; text-decoration: none;">Song Link Cambodia</a> · <a href="https://soundcloud.com/nonstop-link-full-in-cambodia/opimx-tm-2023-remix-gnxa-brown" title="OPIMX™-[ស៊ូតសេដ 2023] REMIX[Gnxa+Brown+Lyhorng].mp3" target="_blank" style="color: #cccccc; text-decoration: none;">OPIMX™-[ស៊ូតសេដ 2023] REMIX[Gnxa+Brown+Lyhorng].mp3</a></div>
+
 
 
                             <div
                                 class="profile-block profile-detail-block d-flex flex-wrap align-items-center mt-5">
                                 <div class="d-flex mb-3 mb-lg-0 mb-md-0">
-                                    <img src="{{asset('pod_talk')}}/images/profile/woman-posing-black-dress-medium-shot.jpg"
+                                    <img src="{{asset('pod_talk')}}/images/profile/3.jpg"
                                         class="profile-block-image img-fluid" alt="">
 
                                     <p>

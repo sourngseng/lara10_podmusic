@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Songs;
 use App\Models\Singer;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,7 @@ class FrontendController extends Controller
     public function index(){
 
         $data['singers']=Singer::all();
+        $data['songs']=Songs::limit(2)->get();
 
         // dd($data['singers']);
 
@@ -22,15 +24,18 @@ class FrontendController extends Controller
     }
 
     public function contact(){
-        return view('Frontend.contact');
+        return view('frontend.contact');
     }
 
     public function listing_page(){
-        return view('Frontend.listing-page');
+        return view('frontend.listing-page');
     }
 
-    public function detail_page(){
-        return view( 'Frontend.detail-page');
+    public function detail_page($id){
+        $data['song']=Songs::find($id);
+
+        // dd($data['song']);
+       return view('frontend.detail_page', $data);
     }
 }
 
