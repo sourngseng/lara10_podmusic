@@ -28,7 +28,8 @@ class FrontendController extends Controller
     }
 
     public function listing_page(){
-        return view('frontend.listing-page');
+        $data['songs']=Songs::all();
+        return view('frontend.listing-page', $data);
     }
 
     public function detail_page($id){
